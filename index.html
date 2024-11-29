@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(238, 220, 220);
+            font-size: 1rem; /* Base font size for responsive typography */
+            padding-top: 80px; /* Add top padding to prevent content from being hidden under the navbar */
+            
+        }
+        .hero {
+            height: 300px; /* Fixed height for hero section */
+            background-image: url('image.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                height: 200px; /* Adjust height for mobile */
+            }
+        }
+        .clickable-image {
+            cursor: pointer;
+            transition: transform 0.2s; /* Animation for hover effect */
+            margin-bottom: 15px; /* Space between images */
+            width: 100%; /* Full width of column */
+            height: 250px; /* Set a fixed height for uniformity */
+            object-fit: cover; /* Ensure images cover the space without distortion */
+        }
+        .clickable-image:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        .description {
+            display: none; /* Initially hide the description */
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light background for description */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Informational</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <div id='home' class='container my-5'>
+        <h2>Home</h2> 
+        <!-- Clickable Pictures -->
+        <div id='imageGallery' class='row'>
+            <!-- Image Blocks -->
+            <!-- Image 1 -->
+            <div class='col-md-6 col-sm-12'>
+                <img src='pistol.JPG' alt='Clickable Image 1' class='clickable-image' onclick='showDescription("description1")'>
+                <h4>PISTOL</h4>
+                <div id='description1' class='description'>PISTOL fires a chambered round, extracts and ejects the empty casing and then loads a new round into the chamber (if additional rounds are in the magazine) with each trigger pull</div>
+            </div>
+
+             <!-- Image 2 -->
+             <div class='col-md-6 col-sm-12'>
+                <img src='leveraction.jpg' alt='Clickable Image 2' class='clickable-image' onclick='showDescription("description2")'>
+                <h4>LEVER-ACTION</h4>
+                <div id='description2' class='description'>LEVER-ACTION firearm has a large metal lever located behind the trigger. The lever cycles the loading, firing, and unloading process. The extension of the lever rests in a hollow in the bolt. Cocking the rifle loads a round in the chamber, and pulling the trigger fires the rifle.</div>
+             </div>
+
+             <!-- Image 3 -->
+             <div class='col-md-6 col-sm-12'>
+                <img src='shotgun.avif' alt='Clickable Image 3' class='clickable-image' onclick='showDescription("description3")'>
+                <h4>SHOTGUN</h4>
+                <div id='description3' class='description'>SHOTGUN (also known as a scattergun, peppergun, or historically as a fowling piece) is a long-barreled firearm designed to shoot a straight-walled cartridge known as a shotshell, which discharges numerous small spherical projectiles called shot, or a single solid projectile called a slug.</div>
+             </div>
+
+             <!-- Image 4 -->
+            <div class='col-md-6 col-sm-12'>
+                <img src='riffle.webp' alt='Clickable Image 4' class='clickable-image' onclick='showDescription("description4")'>
+                <h4>RIFFLE</h4>
+                <div id='description4' class='description'>RIFFLE is a relatively shallow length of stream where the water is turbulent and flows faster. The shuffle amounts to a riffle shuffle in which exactly m cards are cut off. The expert weighed the gravel before grinding, weighed the scrapings of the riffles, and made careful notes on the results of each batch.</div>
+            </div>
+
+             <!-- Image 5 -->
+             <div class='col-md-6 col-sm-12'>
+                <img src='airgun.webp' alt='Clickable Image 5' class='clickable-image' onclick='showDescription("description5")'>
+                <h4>AIRGUN</h4>
+                <div id='description5' class='description'>AIRGUN is a gun that uses energy from compressed air or other gases that are mechanically pressurized and then released to propel and accelerate projectiles, similar to the principle of the primitive blowgun.</div>
+            </div>
+
+             <!-- Image 6 -->
+             <div class='col-md-6 col-sm-12'>
+                <img src='boltaction.jpg' alt='Clickable Image 6' class='clickable-image' onclick='showDescription("description6")'>
+                <h4>BOLT-ACTION</h4>
+                <div id='description6' class='description'> BOLT-ACTION firearm operates like opening and closing a door bolt. The bolt solidly locks into the breech, making it accurate and dependable. To open the action, lift the handle up and pull it to the rear. If the firearm is loaded, the cartridge or shotshell will be ejected as you pull the bolt to the rear.</div>
+            </div>
+
+             <!-- Image 7 -->
+             <div class='col-md-6 col-sm-12'>
+                <img src='carbine.webp' alt='Clickable Image 7' class='clickable-image' onclick='showDescription("description7")'>
+                <h4>CARBINE</h4>
+                <div id='description7' class='description'>CARBINE is a lightweight, short-barreled variation of an existing rifle model. These qualities make it more portable and easier to carry than standard long-barreled rifles.</div>
+            </div>
+
+             <!-- Image 8 -->
+             <div class='col-md-6 col-sm-12'>
+                <img src='revolver.jpg' alt='Clickable Image 8' class='clickable-image' onclick='showDescription("description8")'>
+                <h4>REVOLVER</h4>
+                <div id='description8' class='description'> REVOLVER is a repeating handgun with at least one barrel and a revolving cylinder containing multiple chambers (each holding a single cartridge) for firing. Because most revolver models hold up to six cartridges, before needing to be reloaded, revolvers are commonly called six shooters or sixguns.</div>
+            </div>
+
+         </div> 
+     </div>
+
+     <!-- About Section -->
+     <div id='about' class='container my-5'>
+         <h2>About Us</h2> 
+         <p>Always Open Commerce navigates the treacherous landscape of online commerce with expertise and finesse. Our team supports the fundamental right to sell legal firearms and accessories to responsible consumers. We understand that selling guns online comes with its own set of unique challenges and we take it upon ourselves to conquer them all.</p> 
+         <p>We fearlessly tackle these obstacles head-on, providing innovative solutions that ensure a seamless buying experience for both sellers and buyers alike.</p> 
+     </div>
+
+     <!-- Services Section -->
+<div id='services' class='container my-5'>
+    <h2>Our Services</h2>
+    <ul>
+        <li><a href="#" class="service-link" data-description="We provide expert consultation to help you navigate your challenges and achieve your goals.">Consultation Services</a></li>
+        <li><a href="#" class="service-link" data-description="We disseminate crucial information to keep you updated on industry trends and best practices.">Information Dissemination</a></li>
+        <li><a href="#" class="service-link" data-description="Our support and guidance services ensure you have the assistance you need at every step.">Support and Guidance</a></li>
+    </ul>
+    <div id="service-description" class="description-box" style="display: none; margin-top: 20px; border: 1px solid #ccc; padding: 10px;">
+        <p id="description-text"></p>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle the click event
+    document.querySelectorAll('.service-link').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const description = this.getAttribute('data-description'); // Get the description from data attribute
+            document.getElementById('description-text').innerText = description; // Set the description text
+            document.getElementById('service-description').style.display = 'block'; // Show the description box
+        });
+    });
+</script>
+
+<style>
+    .description-box {
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        padding: 15px;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .service-link {
+        text-decoration: none; /* Remove underline */
+        color: #007bff; /* Bootstrap primary color */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+    .service-link:hover {
+        color: #0056b3; /* Darker shade on hover */
+    }
+</style>
+
+    <!-- Contact Section -->
+<div id='contact' class='container my-5'>
+    <h2>Contact Us</h2> 
+    <p>If you have any questions or inquiries, feel free to reach out to us by filling out the form below!</p> 
+
+    <!-- Contact Form -->
+    <form action='#' method='POST'>
+        <!-- Name Field -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email Field -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Message Field -->
+        <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Enter your message" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form> 
+</div>
+
+
+     <!-- Footer -->
+     <footer class='bg-light text-center py-4'>
+         <div class='container'>
+             &copy;2024 My Information System. All Rights Reserved.
+         </div>
+     </footer>
+
+     <!-- Bootstrap JS and dependencies -->
+     <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js'></script> 
+     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js'></script> 
+     <script> 
+       // Function to show the description when an image is clicked
+       function showDescription(descriptionId) { 
+           const descriptions = document.querySelectorAll('.description'); 
+           descriptions.forEach(desc => desc.style.display = 'none'); 
+           const selectedDescription = document.getElementById(descriptionId); 
+           selectedDescription.style.display = 'block'; 
+       } 
+     </script>
+
+</body>
+</html>
